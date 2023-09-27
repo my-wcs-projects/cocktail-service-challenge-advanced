@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6 l4" *ngFor="let cocktail of cocktails">
+      <div class="card">
+        <div class="card-image">
+          <img [src]="cocktail.image" [alt]="cocktail.name" />
+        </div>
+        <div class="card-content">
+          <h5>{{ cocktail.name }}</h5>
+          <p>
+            {{ cocktail.price }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
