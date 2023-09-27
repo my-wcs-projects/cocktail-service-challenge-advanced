@@ -13,6 +13,8 @@ export class CocktailListComponent implements OnInit {
   constructor(public CcocktailService: CocktailService) {}
 
   ngOnInit() {
-    this.cocktails = this.CcocktailService.getCocktails();
+    this.CcocktailService.getCocktails().subscribe(
+      (data: Cocktail[]) => (this.cocktails = data)
+    );
   }
 }
